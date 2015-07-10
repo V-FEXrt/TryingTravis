@@ -3,4 +3,5 @@ xcode_project: TryingTravis.xcodeproj
 xcode_scheme: TryingTravis
 before_install:
   - brew update
+  - brew unlink xctool
   - brew install xctool --HEAD
