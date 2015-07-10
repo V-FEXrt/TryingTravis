@@ -1,3 +1,3 @@
 language: objective-c
 xcode_project: TryingTravis.xcodeproj
-xcode_scheme: TryingTravis
+
