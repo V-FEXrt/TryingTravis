@@ -3,4 +3,4 @@ xcode_project: TryingTravis.xcodeproj
 xcode_scheme: TryingTravis
 
 script:
-  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
+  - xctool -project TryingTravis.xcodeproj -scheme TryingTravis build  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
