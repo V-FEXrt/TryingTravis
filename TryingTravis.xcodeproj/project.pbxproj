@@ -354,7 +354,7 @@
 				INFOPLIST_FILE = TryingTravis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MOMC_PLATFORMS = "-sdk iphonesimulator";
+				MOMC_PLATFORMS = "$(PLATFORM_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -366,7 +366,7 @@
 				INFOPLIST_FILE = TryingTravis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MOMC_PLATFORMS = "-sdk iphonesimulator";
+				MOMC_PLATFORMS = "$(PLATFORM_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
