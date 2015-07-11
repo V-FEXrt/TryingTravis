@@ -30,7 +30,7 @@
 /**
  *  Function without params
  *
- *  @return "Hello World
+ *  @return "Hello World Again"
  */
 -(NSString*)AnotherFunction;
 
