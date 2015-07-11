@@ -12,6 +12,7 @@ script:
   - git status
   - git remote set-url origin https://github.com/V-FEXrt/TryingTravis.git
   - git pull origin master
+  - git checkout master
   - git add --all
   - git commit -m "Committd by Travis-CI Updating Documentation for build $((TRAVIS_JOB_ID - 1))"
   - git status
