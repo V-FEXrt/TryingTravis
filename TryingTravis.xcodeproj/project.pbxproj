@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		7773108C1B50C47B00710D4D /* NSObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 7773108B1B50C47B00710D4D /* NSObj.m */; };
+		772C0B061B50DAAE003AC7A6 /* TTSuperObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 772C0B051B50DAAE003AC7A6 /* TTSuperObject.m */; };
 		77B6B7031B4F6D9A007D1C77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B6B7021B4F6D9A007D1C77 /* main.m */; };
 		77B6B7061B4F6D9A007D1C77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B6B7051B4F6D9A007D1C77 /* AppDelegate.m */; };
 		77B6B7091B4F6D9A007D1C77 /* TryingTravis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77B6B7071B4F6D9A007D1C77 /* TryingTravis.xcdatamodeld */; };
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7773108A1B50C47B00710D4D /* NSObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObj.h; sourceTree = "<group>"; };
-		7773108B1B50C47B00710D4D /* NSObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObj.m; sourceTree = "<group>"; };
+		772C0B041B50DAAE003AC7A6 /* TTSuperObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTSuperObject.h; path = TryingTravis/TTSuperObject.h; sourceTree = "<group>"; };
+		772C0B051B50DAAE003AC7A6 /* TTSuperObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTSuperObject.m; path = TryingTravis/TTSuperObject.m; sourceTree = "<group>"; };
 		77B6B6FD1B4F6D9A007D1C77 /* TryingTravis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryingTravis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B6B7011B4F6D9A007D1C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B6B7021B4F6D9A007D1C77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		77B6B6F41B4F6D9A007D1C77 = {
 			isa = PBXGroup;
 			children = (
+				772C0B041B50DAAE003AC7A6 /* TTSuperObject.h */,
+				772C0B051B50DAAE003AC7A6 /* TTSuperObject.m */,
 				77B6B6FF1B4F6D9A007D1C77 /* TryingTravis */,
 				77B6B71C1B4F6D9A007D1C77 /* TryingTravisTests */,
 				77B6B6FE1B4F6D9A007D1C77 /* Products */,
@@ -100,8 +102,6 @@
 		77B6B6FF1B4F6D9A007D1C77 /* TryingTravis */ = {
 			isa = PBXGroup;
 			children = (
-				7773108A1B50C47B00710D4D /* NSObj.h */,
-				7773108B1B50C47B00710D4D /* NSObj.m */,
 				77B6B7041B4F6D9A007D1C77 /* AppDelegate.h */,
 				77B6B7051B4F6D9A007D1C77 /* AppDelegate.m */,
 				77B6B70A1B4F6D9A007D1C77 /* ViewController.h */,
@@ -252,7 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"ColeSter Productions\";\ncompanyID=\"com.colesterproductions\";\ncompanyURL=\"http://colesterproductions.com\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"/Users/v-fexrt/Documents/Git/TryingTravis/Documentation\";\n# End constants\nappledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--logformat xcode \\\n--no-create-docset \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+			shellScript = "/usr/local/bin/appledoc  \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"ColeSter Productions\" \\\n--company-id \"com.colesterproductions\" \\\n--output \"/Users/v-fexrt/Documents/Git/TryingTravis/Documentation\" \\\n--no-create-docset \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n--ignore \"ViewController.h\" \\\n--ignore \"AppDelegate.h\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -264,8 +264,8 @@
 				77B6B7091B4F6D9A007D1C77 /* TryingTravis.xcdatamodeld in Sources */,
 				77B6B7061B4F6D9A007D1C77 /* AppDelegate.m in Sources */,
 				77B6B70C1B4F6D9A007D1C77 /* ViewController.m in Sources */,
+				772C0B061B50DAAE003AC7A6 /* TTSuperObject.m in Sources */,
 				77B6B7031B4F6D9A007D1C77 /* main.m in Sources */,
-				7773108C1B50C47B00710D4D /* NSObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +469,7 @@
 				777310871B50BB5900710D4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77B6B6F81B4F6D9A007D1C77 /* Build configuration list for PBXProject "TryingTravis" */ = {
 			isa = XCConfigurationList;
