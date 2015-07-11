@@ -8,12 +8,8 @@ script:
   
 after_success:
   - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - echo "https://${TOKEN}:@github.com" > .git/credentials
   - echo "HelloWorld" >> testfile.txt
   - git add testfile.txt
   - git commit -m "Creating testfile"
   - git push origin master
-  
-env:
-  global:
-    secure: Jo7sNGeF/w2cECX4AVnu9HyYsBCREPNb6mM48kBllQfdPit1EKxzBdofLb8N06KBjXV91D4cffQ73HKLjgRZ05lxL9F2DilFAjJNvUHvZ4DrTky2v+0NmVDw/myNBdrLA+1HivsKhdnF7xzjciwpKwNsJvlXSTs5ExGw620chcFDj1alyby48nOfEOlJMDy/d1knTlLL9IhUMuOCLJz1fv/Z5zmsThXH1r1eO8+ey8rjWvVS1cRcK58trRYfxwZXunBrqP5MMmDOX6AVJR42/rXlG5xMSq8G8WPNozk6sPF4m9IefLI18blBR8C6hAHK60RlUFgGngWe5DBHfae+mTQyakX7PrX88xB5BAvEtnC85YAi0fsv6OEyXhWojm/U8Qt5rESvx8eMr+M+mckMlMMUcEQBKzVVaL/iqKCFwPMtjUMnAz/QmG7L3SpB1Dz/o721S0eFaiv0uwJe5+fTtz12eMGg/823pVe6tzAhUMBlQGVhHZkoRO1gC0G14enHe5Nj4kW/eTrJS5EPtCS9rBnB3/Flj/nbjtBE/1dBRcr1gr3ovORLiAKXvMMaYng/flsNg8FHxKANziYR52yXfvKU80B2i1oO6q4v3IGafA5uvA2X1zMG4mMNnO9p/vgG2SRTMFoux8ZpFQkiFAjcv0aDY2ST3RgQoTDV0wG99ds=
