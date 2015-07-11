@@ -151,6 +151,7 @@
 				77B6B6F91B4F6D9A007D1C77 /* Sources */,
 				77B6B6FA1B4F6D9A007D1C77 /* Frameworks */,
 				77B6B6FB1B4F6D9A007D1C77 /* Resources */,
+				77D9600F1B517C4A00E0AE07 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -252,7 +253,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc  \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"ColeSter Productions\" \\\n--company-id \"com.colesterproductions\" \\\n--output \"/Users/v-fexrt/Documents/Git/TryingTravis/Documentation\" \\\n--no-create-docset \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n--ignore \"ViewController.h\" \\\n--ignore \"AppDelegate.h\" \\\n\"${PROJECT_DIR}\"";
+			shellScript = "rm -r \"${PROJECT_DIR}/${PROJECT_NAME}/Documentation\"\n\n/usr/local/bin/appledoc  \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"ColeSter Productions\" \\\n--company-id \"com.colesterproductions\" \\\n--output \"${PROJECT_DIR}/${PROJECT_NAME}\" \\\n--no-create-docset \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n--ignore \"ViewController.h\" \\\n--ignore \"AppDelegate.h\" \\\n\"${PROJECT_DIR}\"\n\nmv \"${PROJECT_DIR}/${PROJECT_NAME}/html\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}/Documentation\"\n";
+		};
+		77D9600F1B517C4A00E0AE07 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -r \"${PROJECT_DIR}/${PROJECT_NAME}/Documentation\"\n\n/usr/local/bin/appledoc  \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"ColeSter Productions\" \\\n--company-id \"com.colesterproductions\" \\\n--output \"${PROJECT_DIR}/${PROJECT_NAME}\" \\\n--no-create-docset \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n--ignore \"ViewController.h\" \\\n--ignore \"AppDelegate.h\" \\\n\"${PROJECT_DIR}\"\n\nmv \"${PROJECT_DIR}/${PROJECT_NAME}/html\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}/Documentation\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
