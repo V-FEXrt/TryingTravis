@@ -3,8 +3,7 @@ xcode_project: TryingTravis.xcodeproj
 xcode_scheme: TryingTravis
 
 script:
-  - xctool -sdk iphonesimulator -project TryingTravis.xcodeproj -scheme TryingTravis
-  test  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+  - xctool -sdk iphonesimulator -project TryingTravis.xcodeproj -scheme TryingTravis test  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
   
   - git config --global user.name "V-FEXrt"
   - git config --global user.email "ashley78@ksu.edu"
