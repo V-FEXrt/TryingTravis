@@ -6,10 +6,10 @@ script:
 - xctool -sdk iphonesimulator -project TryingTravis.xcodeproj -scheme TryingTravis
   test  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
   
-after_script:
+after_success:
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - touch testfile.txt
+  - echo "HelloWorld" >> testfile.txt
   - git add testfile.txt
   - git commit -m "Creating testfile"
   - git push origin master
