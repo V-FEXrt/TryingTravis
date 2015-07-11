@@ -25,4 +25,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(int)TestFunctionWithParam:(NSString*)string{
+    return 0;
+}
 @end
