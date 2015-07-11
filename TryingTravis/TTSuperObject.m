@@ -14,4 +14,7 @@
     return string;
 }
 
+-(NSString*)AnotherFunction{
+    return @"Hello World";
+}
 @end

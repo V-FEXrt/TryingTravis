@@ -27,4 +27,11 @@
  */
 -(NSString*)ReturnThisString:(NSString*)string;
 
+/**
+ *  Function without params
+ *
+ *  @return "Hello World
+ */
+-(NSString*)AnotherFunction;
+
 @end
