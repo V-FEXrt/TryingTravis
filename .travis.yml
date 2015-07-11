@@ -5,6 +5,7 @@ xcode_scheme: TryingTravis
 script:
   - xctool -sdk iphonesimulator -project TryingTravis.xcodeproj -scheme TryingTravis test  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
   
+  - ssh-keyscan github.com >> ~/.ssh/known_hosts
   - git config --global user.name "V-FEXrt"
   - git config --global user.email "ashley78@ksu.edu"
   - git config credential.helper "store --file=.git/credentials"
