@@ -13,5 +13,5 @@ after_success:
   - git remote set-url origin https://github.com/V-FEXrt/TryingTravis.git
   - git checkout master
   - git add --all
-  - git commit -m "Commit by Travis-CI Updating Documentation for build $(TRAVIS_BUILD_NUMBER) [ci skip]"
+  - git commit -m "Commit by Travis-CI Updating Documentation for build $((TRAVIS_BUILD_NUMBER)) [ci skip]"
   - git push origin master
