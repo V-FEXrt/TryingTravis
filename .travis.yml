@@ -13,4 +13,5 @@ script:
   - git status
   - git add testfile.txt
   - git commit -m "Creating testfile"
+  - git remote set-url origin https://github.com/V-FEXrt/TryingTravis.git
   - git push origin master
